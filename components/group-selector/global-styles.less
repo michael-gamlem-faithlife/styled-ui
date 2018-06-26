@@ -1,0 +1,47 @@
+@import '../../../Styles/global/thickness';
+
+.group-selector-container {
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+	.groupSelect__input {
+		display: inline-block;
+		vertical-align: middle;
+		border-radius: 3px;
+		border: 1px solid #a8a8a8;
+		padding: 11px;
+	}
+
+	.input {
+		margin-bottom: 0;
+	}
+}
+
+.modal {
+	*, *:before, *:after {
+		box-sizing: border-box;
+	}
+
+	.search__input {
+		border-radius: @thickness-5;
+		background-color: white;
+		border: solid 1px #a8a8a8;
+		padding: @thickness-3 @thickness-3 @thickness-3 @thickness-6;
+		margin-bottom: 40px;
+
+		&:focus {
+			margin-bottom: 40px;
+		}
+	}
+
+	.create-group-input {
+		margin-bottom: @thickness-4;
+		padding: 10px;
+		border-color: #a8a8a8;
+
+		&:focus {
+			margin-bottom: @thickness-4;
+		}
+	}
+}
