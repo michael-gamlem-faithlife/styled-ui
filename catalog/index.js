@@ -2,7 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Catalog, pageLoader } from 'catalog';
-import { Button, Checkbox, TextInput, Bootstrap, Modal, ModalFooter } from '../components';
+import { Button, Checkbox, TextInput, Bootstrap, Modal, ModalFooter, GroupSelector } from '../components';
 import { colors } from '../components/shared-styles';
 import CarouselDemo from './bootstrap/carousel-demo.jsx';
 import DocgenTable from './docgen-table.jsx';
@@ -90,13 +90,25 @@ const pages = [
 				path: '/modal/variations',
 				title: 'Modal Variations',
 				content: pageLoader(() => import('./modal/variations.md')),
-				imports: { ...TextInput, Modal, ModalFooter, Button, delayPromise },
+				imports: { ...TextInput, ...Modal, ModalFooter, Button, delayPromise },
 			},
 			{
 				path: '/modal/documentation',
 				title: 'Modal Documentation',
 				content: pageLoader(() => import('./modal/documentation.md')),
-				imports: { Modal, DocgenTable },
+				imports: { ...Modal, DocgenTable },
+			},
+			{
+				path: '/group-selector/variations',
+				title: 'Group Selector Variations',
+				content: pageLoader(() => import('./group-selector/variations.md')),
+				imports: { GroupSelector },
+			},
+			{
+				path: '/group-selector/documentation',
+				title: 'Group Selector Documentation',
+				content: pageLoader(() => import('./group-selector/documentation.md')),
+				imports: { GroupSelector, DocgenTable },
 			},
 		],
 	},
