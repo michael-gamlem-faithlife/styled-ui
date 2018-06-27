@@ -1,0 +1,115 @@
+@import './colors';
+
+@heading-font-family: 'Gotham A', 'Gotham B';
+@body-font-family: 'Source Sans Pro', sans-serif;
+
+.h1, h1 {
+	font-family: @body-font-family;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 36px;
+	margin: 0;
+}
+
+.h2, h2 {
+	font-family: @body-font-family;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 30px;
+	margin: 0;
+}
+
+.h3, h3 {
+	font-family: @body-font-family;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 900;
+	line-height: 22px;
+	margin: 0;
+}
+
+.h4, h4 {
+	font-family: @body-font-family;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 16px;
+}
+
+.h5, h5 {
+	font-family: @body-font-family;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 14px
+}
+
+.b1 {
+	font-family: @body-font-family;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 24px;
+}
+
+.b2 {
+	font-family: @body-font-family;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 22px;
+}
+
+.b3 {
+	font-family: @body-font-family;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 20px;
+}
+
+.b4 {
+	font-family: @body-font-family;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+}
+
+.b5 {
+	font-family: @body-font-family;
+	font-size: 11px;
+	font-weight: normal;
+	line-height: 16px;
+}
+
+.b6 {
+	font-family: @body-font-family;
+	font-size: 10px;
+	font-weight: normal;
+	line-height: 14px;
+}
+
+.ui3 {
+	font-family: @body-font-family;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 16px;
+}
+
+.text-center {
+	text-align: center;
+}
+
+a {
+	color: @link-color;
+	text-decoration: none;
+	.ui3;
+
+	&:active,
+	&:hover,
+	&:focus {
+		color: @link-color;
+		text-decoration: underline;
+	}
+}
+
+textarea, input, select {
+	.ui3;
+}

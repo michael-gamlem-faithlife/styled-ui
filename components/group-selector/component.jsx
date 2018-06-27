@@ -40,6 +40,7 @@ export default class GroupSelector extends React.PureComponent {
 		),
 		userId: PropTypes.string,
 		userEmail: PropTypes.string,
+		handleSignInClick: PropTypes.func.isRequired,
 	};
 
 	static views = {
@@ -276,6 +277,7 @@ export default class GroupSelector extends React.PureComponent {
 					onInputChange={this.handleSearchInputChange}
 					onModalViewChange={this.handleModalViewChange}
 					onSiteCreation={this.handleSiteCreation}
+					onClick={this.props.handleSignInClick}
 				/>
 				{modalView && (
 					<Modal container={this.props.modalContainerSelector}>

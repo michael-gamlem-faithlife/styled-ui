@@ -1,0 +1,37 @@
+.sidebar {
+	.add-item {
+		border-radius: 5px;
+		box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+		box-sizing: border-box;
+		background: @shade0;
+		margin-bottom: @thickness-4;
+		padding: @thickness-5;
+		width: 100%;
+
+		&__error {
+			color: @error-color;
+			padding-bottom: @thickness-3;
+		}
+
+		&__next-item {
+			margin-top: @thickness-4;
+		}
+
+		&__actions {
+			margin-top: @thickness-5;
+			text-align: right;
+
+			&__add {
+				margin-left: @thickness-4;
+			}
+		}
+
+		&__list {
+			list-style: none;
+		}
+
+		&__title {
+			margin-bottom: @thickness-4;
+		}
+	}
+}
