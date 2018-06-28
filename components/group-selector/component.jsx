@@ -80,6 +80,16 @@ export default class GroupSelector extends React.PureComponent {
 			? props.groups.filter(group => group.kind === 'church' && group.membershipKind === 'admin')
 			: [];
 
+		this.state = {
+			userGroups: props.groups,
+			searchedGroups: props.groups,
+			showLoadingIndicator: false,
+			adminChurchGroups,
+			errorMessage: '',
+		};
+	}
+
+	getCurrentViewForPropsAndGroups = (props, adminChurchGroups) => {
 		let view = 'signin';
 		if (props.userId && adminChurchGroups.length) {
 			view = 'dropdown';
@@ -87,15 +97,8 @@ export default class GroupSelector extends React.PureComponent {
 			view = 'input';
 		}
 
-		this.state = {
-			userGroups: props.groups,
-			searchedGroups: props.groups,
-			showLoadingIndicator: false,
-			adminChurchGroups,
-			view,
-			errorMessage: '',
-		};
-	}
+		return view;
+	};
 
 	fetchSearchedGroups = debounce(search => {
 		fetch
@@ -259,7 +262,8 @@ export default class GroupSelector extends React.PureComponent {
 			errorMessage,
 		} = this.state;
 
-		const view = GroupSelector.views[this.state.view];
+		const view =
+			GroupSelector.views[this.getCurrentViewForPropsAndGroups(this.props, adminChurchGroups)];
 		const View = view.component;
 
 		let ModalContent;
