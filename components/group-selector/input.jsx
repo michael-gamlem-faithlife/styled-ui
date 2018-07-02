@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TextInput from '../text-input/text-input.jsx';
-import styles from './styles.less';
+import styles from './styles.m.less';
 import uiStrings from './ui-strings.json';
 
 export default class GroupInput extends React.PureComponent {
@@ -17,7 +17,6 @@ export default class GroupInput extends React.PureComponent {
 
 	render() {
 		const { inputValue, onInputChange } = this.props;
-
 		return (
 			<div>
 				<div className={styles.groupSelectInputContainer}>
@@ -28,7 +27,7 @@ export default class GroupInput extends React.PureComponent {
 						onChange={onInputChange}
 					/>
 				</div>
-				<button className={styles.groupSelectBtn} onClick={this.handleButtonClick}>
+				<button className={styles.groupSelect__Btn} onClick={this.handleButtonClick}>
 					{uiStrings.getStarted}
 				</button>
 			</div>

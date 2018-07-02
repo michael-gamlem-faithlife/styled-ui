@@ -4,7 +4,7 @@ import debounce from 'lodash.debounce';
 import { fetch } from './util';
 import { trackEvents } from './util/analytics';
 import { getPremiumSpoid } from './util/globals';
-import { createGroup, updateGroup, claimGroup } from './accounts-client.js';
+// import { createGroup, updateGroup, claimGroup } from './accounts-client.js';
 import GroupDropdown from './dropdown.jsx';
 import GroupInput from './input.jsx';
 import GroupKindDialog from './modal/group-kind-dialog.jsx';
@@ -14,8 +14,8 @@ import ErrorMessageDialog from './modal/error-message.jsx';
 import Modal from './modal/index.jsx';
 import Search from './modal/search.jsx';
 import Signin from './signin.jsx';
-import './global-styles.less';
-import styles from './styles.less';
+import './global-styles.m.less';
+import styles from './styles.m.less';
 
 export default class GroupSelector extends React.PureComponent {
 	static propTypes = {
@@ -88,6 +88,18 @@ export default class GroupSelector extends React.PureComponent {
 			errorMessage: '',
 		};
 	}
+
+	createGroup = () => {
+		this.alert('create group');
+	};
+
+	updateGroup = () => {
+		this.alert('update group');
+	};
+
+	claimGroup = () => {
+		this.alert('claim group');
+	};
 
 	getCurrentViewForPropsAndGroups = (props, adminChurchGroups) => {
 		let view = 'signin';

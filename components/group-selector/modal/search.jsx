@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import TextInput from '../../text-input/text-input.jsx';
 import Group from '../group.jsx';
 import { Close } from '../../icons';
-import styles from '../styles.less';
+import styles from '../styles.m.less';
 import uiStrings from '../ui-strings.json';
 
 export default class Search extends React.PureComponent {

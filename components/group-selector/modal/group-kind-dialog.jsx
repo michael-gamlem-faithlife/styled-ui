@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Close } from '../../icons';
-import styles from '../styles.less';
+import styles from '../styles.m.less';
 import uiStrings from '../ui-strings.json';
 
 const GroupKindDialog = ({

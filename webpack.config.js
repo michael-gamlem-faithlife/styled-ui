@@ -19,7 +19,29 @@ module.exports = {
 			},
 			{
 				test: /\.less$/,
-				use: ExtractTextPlugin.extract({ use: ['css-loader?url=false', 'less-loader'] }),
+				oneOf: [
+					{
+						test: /\.m\.less$/,
+						use: ExtractTextPlugin.extract({
+							fallback: 'style-loader',
+							use: [
+								{
+									loader: 'css-loader',
+									options: {
+										importLoaders: 2,
+										modules: true,
+										localIdentName: '[name]__[local].[hash:base64:8]',
+									},
+								},
+								'postcss-loader',
+								'less-loader',
+							],
+						}),
+					},
+					{
+						use: ExtractTextPlugin.extract({ use: ['css-loader?url=false', 'less-loader'] }),
+					},
+				],
 			},
 		],
 	},

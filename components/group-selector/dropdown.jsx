@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SimpleGroup from './simple-group.jsx';
-import styles from './styles.less';
+import styles from './styles.m.less';
 import icons from './icons';
 
 export default class GroupDropdown extends React.PureComponent {
